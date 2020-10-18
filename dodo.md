@@ -58,9 +58,9 @@ module.exports = {
 import Vue from 'vue'
 import App from './App.vue'
 
-import HeimaUI from '../packages'
+import BuliUi from '../packages'
 
-Vue.use(HeimaUI)
+Vue.use(BuliUi)
 
 Vue.config.productionTip = false
 
@@ -85,7 +85,7 @@ https://cli.vuejs.org/zh/guide/build-targets.html#%E5%BA%93
 修改package.json文件
 
 "private": false,
-"main": "dist/itcast-ui.umd.min.js",
+"main": "dist/buli-ui.umd.min.js",
 "author": {
   "name": "authorName"
 },
