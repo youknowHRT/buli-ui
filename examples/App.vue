@@ -1,13 +1,22 @@
 <template>
   <div id="app">
-    <bu-button type='primary'>爱你</bu-button>
+    <!-- <bu-input type="text" v-model="inputValue1" clearable ></bu-input>
+    <bu-input type="password" v-model="inputValue2" showPassword ></bu-input> -->
+    <bu-switch v-model="switchValue" name="sven"></bu-switch>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      inputValue1: '111',
+      inputValue2: '222',
+      switchValue: true
+    }
+  }
 }
 </script>
 
@@ -17,4 +26,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 </style>

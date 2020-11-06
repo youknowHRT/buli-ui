@@ -211,11 +211,13 @@ export default {
     margin-left: 5px;
   }
   &.disabled{
+    opacity: .5;
     cursor: not-allowed;
-    color:#c0c4cc;
-    background-color:#fff;
-    border-color:#ebeef5
+    // color:#c0c4cc;
+    // background-color:#fff;
+    // border-color:#ebeef5
     // pointer-events:none;
+
   }
 }
 </style>

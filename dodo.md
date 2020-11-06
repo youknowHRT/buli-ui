@@ -103,3 +103,10 @@ babel.config.js
 npm发布
 
 npm login npm publish
+
+### 后续更新
+新增组件
+导出到index.js
+yarn lib 打包
+修改版本
+上传npm
