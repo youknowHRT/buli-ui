@@ -3,12 +3,22 @@ import Button from './components/button'
 import Dialog from './components/dialog'
 import Input from './components/input'
 import Switch from './components/switch'
+import Radio from './components/radio'
+import RadioGroup from './components/radio-group'
+import Checkbox from './components/checkbox'
+import Form from './components/form'
+import FormItem from './components/form-item'
 import './fonts/font.scss'
 const components = [
   Button,
   Dialog,
   Input,
-  Switch
+  Switch,
+  Radio,
+  RadioGroup,
+  Checkbox,
+  Form,
+  FormItem
 ]
 const install = function (Vue) {
   components.forEach(component => {

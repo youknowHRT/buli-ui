@@ -109,4 +109,5 @@ npm login npm publish
 导出到index.js
 yarn lib 打包
 修改版本
+切换nrm源 `nrm ls`    `nrm use npm `
 上传npm
