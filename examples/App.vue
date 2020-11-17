@@ -3,18 +3,18 @@
     <!-- <bu-input type="text" v-model="inputValue1" clearable ></bu-input>
     <bu-input type="password" v-model="inputValue2" showPassword ></bu-input> -->
     <!-- <bu-switch v-model="switchValue" name="sven"></bu-switch> -->
-    <!-- <bu-radio label='1' v-model="gender">男</bu-radio>
-    <bu-radio label='0' v-model="gender">女</bu-radio>
-    <bu-radio-group v-model="gender">
+    <bu-radio label='1' v-model="value">男</bu-radio>
+    <bu-radio label='0' v-model="value">女</bu-radio>
+    <!-- <bu-radio-group v-model="gender">
       <bu-radio label='1'>男</bu-radio>
       <bu-radio label='0'>女</bu-radio>
     </bu-radio-group> -->
     <!-- <bu-checkbox v-model="switchValue"></bu-checkbox> -->
-    <bu-checkbox-group v-model="arr">
+    <!-- <bu-checkbox-group v-model="arr">
       <bu-checkbox label="a"></bu-checkbox>
       <bu-checkbox label="b"></bu-checkbox>
-    </bu-checkbox-group>
-    <bu-form :model="model">
+    </bu-checkbox-group> -->
+    <!-- <bu-form :model="model">
       <bu-form-item label="姓名">
         <bu-input :placeholder="model.inputValue1"></bu-input>
       </bu-form-item>
@@ -25,7 +25,7 @@
         <bu-button type="primary">确定</bu-button>
         <bu-button>{{model.animal}}</bu-button>
       </bu-form-item>
-    </bu-form>
+    </bu-form> -->
   </div>
 </template>
 
@@ -42,7 +42,8 @@ export default {
         gender: '1',
         animal: '蒜头王八'
       },
-      arr: []
+      arr: [],
+      value: ''
     }
   }
 }

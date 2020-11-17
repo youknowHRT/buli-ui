@@ -133,8 +133,8 @@ export default {
       }
     }
   }
-  // .bu-checkbox__label{
-  //   color: #409eff;
-  // }
+  .bu-checkbox__label{
+    color: #409eff;
+  }
 }
 </style>

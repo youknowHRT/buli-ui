@@ -1,13 +1,15 @@
 <template>
-  <label class="bu-radio" :class="{'is-checked':label===model}">
+  <label class="bu-radio" :class="{ 'is-checked': label === model }">
     <!-- 小圆 -->
     <span class="bu-radio__input">
       <span class="bu-radio__inner"></span>
-      <input class="bu-radio__original" type="radio"
+      <input
+        class="bu-radio__original"
+        type="radio"
         :value="label"
         :name="name"
-        v-model='model'
-      >
+        v-model="model"
+      />
     </span>
     <span class="bu-radio__label">
       <slot></slot>
@@ -92,6 +94,17 @@ export default {
       cursor: pointer;
       display: inline-block;
       box-sizing: border-box;
+      &:after {
+        box-sizing: content-box;
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
     }
     .bu-radio__original {
       opacity: 0;
@@ -117,10 +130,11 @@ export default {
       background: #409eff;
       &:after {
         transform: translate(-50%, -50%) scale(1);
+        background-color: #fff;
       }
     }
   }
-  .bu-radio__laber {
+  .bu-radio__label {
     color: #409eff;
   }
 }
