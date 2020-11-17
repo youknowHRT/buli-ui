@@ -6,6 +6,7 @@ import Switch from './components/switch'
 import Radio from './components/radio'
 import RadioGroup from './components/radio-group'
 import Checkbox from './components/checkbox'
+import CheckboxGroup from './components/checkbox-group'
 import Form from './components/form'
 import FormItem from './components/form-item'
 import './fonts/font.scss'
@@ -17,6 +18,7 @@ const components = [
   Radio,
   RadioGroup,
   Checkbox,
+  CheckboxGroup,
   Form,
   FormItem
 ]

@@ -10,12 +10,16 @@
       <bu-radio label='0'>女</bu-radio>
     </bu-radio-group> -->
     <!-- <bu-checkbox v-model="switchValue"></bu-checkbox> -->
+    <bu-checkbox-group v-model="arr">
+      <bu-checkbox label="a"></bu-checkbox>
+      <bu-checkbox label="b"></bu-checkbox>
+    </bu-checkbox-group>
     <bu-form :model="model">
       <bu-form-item label="姓名">
-        <bu-input :placeholder="inputValue1"></bu-input>
+        <bu-input :placeholder="model.inputValue1"></bu-input>
       </bu-form-item>
       <bu-form-item label="密码">
-        <bu-input :placeholder="inputValue2" name="密码" type="password"></bu-input>
+        <bu-input :placeholder="model.inputValue2" name="密码" type="password"></bu-input>
       </bu-form-item>
       <bu-form-item>
         <bu-button type="primary">确定</bu-button>
@@ -37,7 +41,8 @@ export default {
         switchValue: true,
         gender: '1',
         animal: '蒜头王八'
-      }
+      },
+      arr: []
     }
   }
 }

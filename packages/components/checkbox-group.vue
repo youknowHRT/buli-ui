@@ -1,19 +1,19 @@
 <template>
-    <div class="bu-radio-group">
+    <div class="bu-checkbox-group">
       <slot></slot>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'BuRadioGroup',
+  name: 'BuCheckboxGroup',
   data () {
     return {
     }
   },
   provide () {
     return {
-      RadioGroup: this
+      CheckboxGroup: this
     }
   },
   props: {
