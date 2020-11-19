@@ -39,12 +39,13 @@ export default {
   },
   computed: {
     pages () {
-      // 数组有两种状态，一种是currentPage=4之前的，一种是currentPage=4之后的，要
-      const oldone = [1, this.totalPage,
+      // 数组有两种状态，一种是currentPage=4之前的，一种是currentPage=4之后的，还有currentPage=totalPage-3的状态
+      const general = [1, this.totalPage,
         this.currentPage, this.currentPage - 2,
         this.currentPage - 1, this.currentPage + 1, this.currentPage + 2]
-      const newone = oldone.concat(1, 0, [2, 3, 4, 5, 6])
-      const pages = this.currentPage <= 4 ? newone : oldone
+      const frontPart = general.concat([2, 3, 4, 5, 6])
+      const endPart = general.concat([this.totalPage - 1, this.totalPage - 2, this.totalPage - 3, this.totalPage - 4, this.totalPage - 5])
+      const pages = this.currentPage <= 4 ? frontPart : (this.currentPage >= this.totalPage - 3 ? endPart : general)
       const u = this.unique(pages.sort((a, b) => a - b)).filter((ele) => ele >= 1 && ele <= this.totalPage)
       const u2 = u.reduce((prev, current, index, arr) => {
         if (u[index + 1] !== undefined && u[index + 1] - u[index] > 1) {
