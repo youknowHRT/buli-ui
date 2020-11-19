@@ -9,6 +9,7 @@ import Checkbox from './components/checkbox'
 import CheckboxGroup from './components/checkbox-group'
 import Form from './components/form'
 import FormItem from './components/form-item'
+import Pagination from './components/pagination'
 import './fonts/font.scss'
 const components = [
   Button,
@@ -20,7 +21,8 @@ const components = [
   Checkbox,
   CheckboxGroup,
   Form,
-  FormItem
+  FormItem,
+  Pagination
 ]
 const install = function (Vue) {
   components.forEach(component => {

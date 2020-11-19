@@ -3,13 +3,13 @@
     <!-- <bu-input type="text" v-model="inputValue1" clearable ></bu-input>
     <bu-input type="password" v-model="inputValue2" showPassword ></bu-input> -->
     <!-- <bu-switch v-model="switchValue" name="sven"></bu-switch> -->
-    <bu-radio label='1' v-model="value">男</bu-radio>
-    <bu-radio label='0' v-model="value">女</bu-radio>
+    <!-- <bu-radio label='1' v-model="value">男</bu-radio>
+    <bu-radio label='0' v-model="value">女</bu-radio> -->
     <!-- <bu-radio-group v-model="gender">
       <bu-radio label='1'>男</bu-radio>
       <bu-radio label='0'>女</bu-radio>
     </bu-radio-group> -->
-    <!-- <bu-checkbox v-model="switchValue"></bu-checkbox> -->
+    <!-- <bu-checkbox v-model="switchValue" label="22222"></bu-checkbox> -->
     <!-- <bu-checkbox-group v-model="arr">
       <bu-checkbox label="a"></bu-checkbox>
       <bu-checkbox label="b"></bu-checkbox>
@@ -26,6 +26,7 @@
         <bu-button>{{model.animal}}</bu-button>
       </bu-form-item>
     </bu-form> -->
+    <bu-pagination :totalPage="10" :currentPage="3" hide-if-one-page @change="goToPage"/>
   </div>
 </template>
 
@@ -43,7 +44,10 @@ export default {
         animal: '蒜头王八'
       },
       arr: [],
-      value: ''
+      value: '',
+      switchValue: '11111111',
+      visible: true
+
     }
   }
 }

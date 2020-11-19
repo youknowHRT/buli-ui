@@ -8,8 +8,6 @@
 export default {
   name: 'BuRadioGroup',
   data () {
-    return {
-    }
   },
   provide () {
     return {
