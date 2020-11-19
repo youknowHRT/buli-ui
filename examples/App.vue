@@ -26,7 +26,7 @@
         <bu-button>{{model.animal}}</bu-button>
       </bu-form-item>
     </bu-form> -->
-    <bu-pagination :totalPage="10" :currentPage="3" hide-if-one-page @change="goToPage"/>
+    <bu-pagination :totalPage="20" :currentPage.sync="aaa" hide-if-one-page/>
   </div>
 </template>
 
@@ -46,7 +46,8 @@ export default {
       arr: [],
       value: '',
       switchValue: '11111111',
-      visible: true
+      visible: true,
+      aaa: 1
 
     }
   }
