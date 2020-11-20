@@ -26,7 +26,7 @@
         <bu-button>{{model.animal}}</bu-button>
       </bu-form-item>
     </bu-form> -->
-    <bu-pagination :totalPage="20" :currentPage.sync="aaa" hideIfOnePage/>
+    <bu-pagination :totalPage="1" :currentPage.sync="aaa"/>
   </div>
 </template>
 

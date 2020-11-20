@@ -1,5 +1,5 @@
 <template>
-  <div class="bu-pagination" v-show="hideIfOnePage">
+  <div class="bu-pagination" :class="{buPaginationHide:hideIfOnePage &&totalPage<=1}">
     <span
     class="nav bu-icon-arrow-left"
     :class="{ disabled: currentPage === 1 }"
@@ -128,5 +128,8 @@ export default {
   .bigg{
     font-weight: 700;
   }
+}
+.buPaginationHide{
+  display: none;
 }
 </style>
