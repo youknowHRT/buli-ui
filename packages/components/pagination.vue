@@ -1,17 +1,16 @@
 <template>
   <div class="bu-pagination" v-show="hideIfOnePage">
-    <span class="nav" :class="{ disabled: currentPage === 1 }"
-      ><icon
-        class="bu-icon-arrow-left"
-        @click="clickToPage(currentPage - 1)"
-      ></icon
-    ></span>
+    <span
+    class="nav bu-icon-arrow-left"
+    :class="{ disabled: currentPage === 1 }"
+    @click="clickToPage(currentPage - 1)"
+      ></span>
     <template v-for="page in pages">
       <template v-if="page === currentPage">
         <span class="current" :key="page">{{ page }}</span>
       </template>
       <template v-else-if="page === '...'">
-        <span :key="page.index" class="bu-separator"><icon class="bu-icon-more"></icon></span>
+        <span :key="page.index" class="bu-separator bu-icon-more"></span>
       </template>
       <template v-else>
         <span :key="page" @click="clickToPage(page)" class="normalPage">{{
@@ -19,12 +18,11 @@
         }}</span>
       </template>
     </template>
-    <span class="nav" :class="{ disabled: currentPage === totalPage }"
-      ><icon
-        class="bu-icon-arrow-right"
-        @click="clickToPage(currentPage + 1)"
-      ></icon
-    ></span>
+    <span class="nav bu-icon-arrow-right"
+      :class="{ disabled: currentPage === totalPage }"
+      @click="clickToPage(currentPage + 1)"
+      >
+    </span>
   </div>
 </template>
 
@@ -106,9 +104,6 @@ export default {
     border-radius: 2px;
     margin: 0 2px;
     cursor: pointer;
-    icon {
-      line-height: 28px;
-    }
   }
   .normalPage:hover {
     color: #409eff;
@@ -129,6 +124,9 @@ export default {
     &:hover{
       color:  #606266;
     }
+  }
+  .bigg{
+    font-weight: 700;
   }
 }
 </style>
