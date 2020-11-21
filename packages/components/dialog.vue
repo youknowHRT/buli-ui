@@ -43,9 +43,6 @@ export default {
     }
   },
   methods: {
-    fn () {
-      console.log(this.$slots)
-    },
     handleClose () {
       this.$emit('update:visible', false)
     }

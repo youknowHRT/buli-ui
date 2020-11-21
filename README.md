@@ -6,9 +6,9 @@ yarn add buli-ui
 <!-- or -->
 npm install buli-ui
 ```
-
 ## 导入
-```js{3,4}
+入口页面main.js中如下配置
+```js{3,4,5}
 import Vue from 'vue'
 import App from './App.vue'
 import BuliUi from 'buli-ui'  //引入组件库
