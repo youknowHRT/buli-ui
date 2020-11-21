@@ -28,7 +28,26 @@
     </bu-form> -->
     <!-- <bu-pagination :totalPage="1" :currentPage.sync="aaa"/> -->
     <bu-button type="primary" disabled>点我</bu-button>
-    <bu-button type="danger" disabled>点我</bu-button>
+    <bu-button type="danger" @click="visible=true">点我</bu-button>
+    <bu-dialog  :visible.sync="visible">
+      <template v-slot:title>
+        <span>
+          请选择小精灵
+        </span>
+      </template>
+      <template>
+        <ul>
+          <li>蒜头王八</li>
+          <li>喷火蜥蜴</li>
+          <li>滋水王八</li>
+          <li>黄皮耗子</li>
+        </ul>
+      </template>
+      <template v-slot:footer>
+        <bu-button type='primary' @click="visible=false">确认</bu-button>
+        <bu-button @click="visible=false">取消</bu-button>
+      </template>
+    </bu-dialog>
   </div>
 </template>
 
@@ -48,9 +67,8 @@ export default {
       arr: [],
       value: '',
       switchValue: '11111111',
-      visible: true,
+      visible: false,
       aaa: 1
-
     }
   }
 }

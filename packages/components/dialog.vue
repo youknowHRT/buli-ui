@@ -13,7 +13,7 @@
         <div class="bu-dialog__body">
           <slot></slot>
         </div>
-        <div class="bu-dialog__footer" @click="fn" v-if="$slots.footer">
+        <div class="bu-dialog__footer" v-if="$slots.footer">
           <slot name="footer"></slot>
         </div>
       </div>
@@ -24,6 +24,9 @@
 <script>
 export default {
   name: 'BuDialog',
+  data () {
+    return {}
+  },
   props: {
     title: {
       type: String,
