@@ -1,16 +1,21 @@
 <template>
-    <div class="bu-button" :class="[`bu-button--${type}`,
-      {'is-plain':disabled?'':plain,
-      'is-round':round,
-      'is-circle':circle,
-      'disabled':disabled
-      }]"
-      :disabled="disabled"
-      @click="handleClick"
-    >
-      <i v-if="icon" :class="icon"></i>
-      <span v-if="$slots.default"><slot></slot></span>
-    </div>
+  <div
+    class="bu-button"
+    :class="[
+      `bu-button--${type}`,
+      {
+        'is-plain': disabled ? '' : plain,
+        'is-round': round,
+        'is-circle': circle,
+        disabled: disabled,
+      },
+    ]"
+    :disabled="disabled"
+    @click="handleClick"
+  >
+    <i v-if="icon" :class="icon"></i>
+    <span v-if="$slots.default"><slot></slot></span>
+  </div>
 </template>
 
 <script>
@@ -207,17 +212,15 @@ export default {
     border-radius: 50%;
     padding: 12px;
   }
-  & [class*="bu-icon-"]+span{
+  & [class*='bu-icon-'] + span {
     margin-left: 5px;
   }
-  &.disabled{
-    opacity: .5;
+  &.disabled {
+    opacity: 0.5;
     cursor: not-allowed;
-    // color:#c0c4cc;
-    // background-color:#fff;
-    // border-color:#ebeef5
-    // pointer-events:none;
-
+    &:hover{
+      opacity: .6;
+    }
   }
 }
 </style>

@@ -26,7 +26,9 @@
         <bu-button>{{model.animal}}</bu-button>
       </bu-form-item>
     </bu-form> -->
-    <bu-pagination :totalPage="1" :currentPage.sync="aaa"/>
+    <!-- <bu-pagination :totalPage="1" :currentPage.sync="aaa"/> -->
+    <bu-button type="primary" disabled>点我</bu-button>
+    <bu-button type="danger" disabled>点我</bu-button>
   </div>
 </template>
 
